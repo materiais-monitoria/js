@@ -1,0 +1,39 @@
+<html>
+    
+<head>
+  <title>Document</title>
+  <style>
+    div {
+        width: 50px;
+        height: 50px;
+        border-style: solid;
+        border-color: black;
+    }
+  </style>
+  
+<script type="text/javascript">      
+
+    function mudaCor() {
+
+      document.getElementById("pagina").style.backgroundColor = "pink";
+      //document.querySelector("#pagina")...
+      document.getElementById("pagina").style.color = "orange";
+   
+    }    
+    
+  </script>  
+</head>
+    
+<body id="pagina">   
+
+  <h1>teste</h1>
+
+  <hr>
+
+  <form>
+     <button type="button" onclick="mudaCor();">Muda cor</button>
+  </form>      
+    
+</body>
+    
+</html>

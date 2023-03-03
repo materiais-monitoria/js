@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+function validarIdade() {
+  var idade = document.getElementById("idade").value;
+
+	if (idade >= 18) {		
+		document.getElementById("msg").textContent = "Maior de idade";
+		document.getElementById("msg").style.backgroundColor = "green";
+		document.getElementById("msg").style.color = "white";
+
+	} else {		
+		document.getElementById("msg").textContent = "Menor de idade";
+		document.getElementById("msg").style.backgroundColor = "red";
+		document.getElementById("msg").style.color = "white";		
+	} 
+}
+</script>
+
+<html>
+  
+    <body>
+
+      <form>      
+	      Idade:<br>
+	      <input type="text" id="idade">
+	      <input type="button" value="Verificar" onclick="validarIdade();">
+        <span id="msg"></span>    
+      </form>
+
+    </body>
+</html>

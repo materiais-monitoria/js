@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    
+    <script> 
+           
+        /* Reduce - “Reduz” os itens de um vetor a um valor único. Um valor especial existe nessa função de callback, ele é chamado de acumulador (retorno da iteração anterior). */  
+
+        const valoresProdutos = [10, 25, 30];
+
+        const total1 = valoresProdutos.reduce(
+            (acumulador, atual) => {
+              return acumulador + atual;
+            }
+        );
+
+        console.log(total1); //65
+
+        const frete = 100; //valor inicial do acumulador - não é obrigatório
+        const total2 = valoresProdutos.reduce(
+            (acc, cur) => acc + cur, frete);
+
+        console.log(total2); // 165   
+
+    </script>
+    
+</head>
+<body>
+
+  Arrays
+
+</body>
+</html>

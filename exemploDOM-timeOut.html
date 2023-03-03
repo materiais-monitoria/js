@@ -1,0 +1,31 @@
+<html>    
+<head>
+  <meta charset="utf-8">
+  <title>Time Out</title>
+  
+	<script type="text/javascript">      
+
+	//setTimeOut é para executar algo após x milisegundos
+
+	function acao() {
+		document.getElementById("msg").innerHTML = 
+		document.getElementById("msg").innerHTML  + "Executando...<br/>";
+	}	
+
+	//setTimeout(acao, 5000); //executa a ação após x segundos    
+
+  //para parar com clearTimeOut, precisa atribuir a uma var
+  var timer = setTimeout(acao, 5000);
+
+  </script>  
+</head>
+    
+<body> 
+
+  <div id="msg"></div> <br>
+
+	<button onclick="clearTimeout(timer);">Parar execução</button>
+	   
+
+</body>    
+</html>

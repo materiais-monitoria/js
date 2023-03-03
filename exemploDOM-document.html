@@ -1,0 +1,27 @@
+<html>
+    
+<head>
+  <title>Document</title>
+</head>
+    
+<body>
+    
+    <p id="paragrafo"><b>Parágrafo 1</b></p>
+    
+    <a href="http://www.cotil.unicamp.br" name="link">Cotil</a>
+    | 
+    <a href="http://www.unicamp.br" name="link">Unicamp</a>
+      
+	<script type="text/javascript">      
+
+	    var elementoId = window.document.getElementById('paragrafo').innerHTML; //ou textContent
+	    var elementosNome = window.document.getElementsByName('link')[1].innerHTML;
+
+	    console.log('elementoId >>' + elementoId);
+	    console.log('elementosNome >>' + elementosNome);
+	      
+	</script>
+    
+</body>
+    
+</html>

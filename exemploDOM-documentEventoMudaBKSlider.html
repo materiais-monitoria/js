@@ -1,0 +1,52 @@
+<html>
+    
+<head>
+  <title>JS</title>
+
+  <style type="text/css">
+    body {
+      background-color: pink;
+      color:  black;
+    }
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #range {
+      width: 30px;
+      border-radius: 2px;
+    }
+
+  </style>
+  
+<script type="text/javascript">    
+ function alteraCor() {  
+    if (document.getElementById("range").value == 0) {   
+
+      document.getElementById("pagina").style.backgroundColor = "pink";
+      document.getElementById("pagina").style.color = "black";
+
+    } else if (document.getElementById("range").value == 1) {
+
+      document.getElementById("pagina").style.backgroundColor = "black";
+      document.getElementById("pagina").style.color = "pink"; 
+
+    }
+ }    
+  </script>  
+</head>
+    
+<body id="pagina">   
+
+  <div>
+    <input type="range" value="0" min="0" max="1" id="range" 
+    onchange="alteraCor();">
+  </div>
+
+  <h1>teste</h1>
+    
+</body>
+    
+</html>

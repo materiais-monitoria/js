@@ -1,0 +1,103 @@
+<html>
+    
+<head>
+  <title>Document</title>
+  <style>
+    div {
+        width: 50px;
+        height: 50px;
+        border-style: solid;
+        border-color: black;
+    }
+  </style>
+  
+<script type="text/javascript">   
+    function exibirValor() {
+      var valor = document.getElementById('capacitacao').value;    
+      document.getElementById('valor').textContent = valor;
+    }
+    
+    function exibirCor() {        
+      var cor = document.getElementById('corPreferida').value;            
+      document.getElementById('texto').style.color = cor;
+      document.getElementById('fundo').style.backgroundColor = cor;
+    }  
+  
+    function contarCaracteres() {        
+      var tamMax = 10;
+      var texto = document.getElementById('nome').value; 
+      var numChar = texto.length;        
+      document.getElementById('numeroCaracteres').textContent = numChar; 
+      document.getElementById('numeroCaracteresRest').textContent = tamMax - numChar;     
+    } 
+
+    /*function somar() {
+      document.getElementById('resultado').textContent = 
+      parseInt(document.getElementById('resultado').textContent)+1;
+      formatacao();       
+    }
+    
+    function sub() {
+      document.getElementById('resultado').textContent = 
+      parseInt(document.getElementById('resultado').textContent)-1;     
+      formatacao();
+    } */
+
+    function formatacao() {
+      if ((parseInt(document.getElementById('resultado').textContent)) < 0) {
+        document.getElementById('resultado').style.color = "red";
+      } else {
+        document.getElementById('resultado').style.color = "black";  
+      }        
+    }   
+
+    function somasub(op) {
+      if (op == "+") {
+        document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent)+1;
+      } else if (op == "-") {
+        document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent)-1;
+      }
+      formatacao();
+    }      
+    
+  </script>  
+</head>
+    
+<body>    
+
+<form>
+    Capacitação:<br>  
+    <input type="range" id="capacitacao" min="0" max="10" value="0"
+    onmousemove="exibirValor()"> 
+    <span id="valor">0</span>
+
+    <br><br>
+    Cor preferida:<br>
+    <input type="color" id="corPreferida" onchange="exibirCor()">   
+
+    <br><br>
+    <span id="texto">Minha cor preferida</span>   
+    <div id="fundo"></div> 
+
+   <br><br>
+    Nome:
+    <input type="text" id="nome" maxlength="10" 
+                                 onkeyup="contarCaracteres()">
+    <span id="numeroCaracteres">0</span> caracteres /
+    <span id="numeroCaracteresRest">10</span> caracteres restantes
+
+    <br><br>
+    <span id="resultado">0</span>
+    
+    <!-- 1a opcao - funcoes diferentes -->
+    <!--input type="button" value="+" onclick="somar()">
+    <input type="button" value="-" onclick="sub()"-->     
+
+    <!-- 2a opcao - uma unica funcao -->
+    <input type="button" value="+" onclick="somasub('+')"> 
+    <input type="button" value="-" onclick="somasub('-')">  
+</form>
+   
+</body>
+    
+</html>

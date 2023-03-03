@@ -1,0 +1,32 @@
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <title>Interval</title>
+
+ 
+  <script type="text/javascript">      
+
+	//setInterval é para execução de algo a cada x milisegundos
+
+	function acao() {		
+		document.getElementById("msg").innerHTML = document.getElementById("msg").innerHTML  + "Executando...<br/>";
+	}
+
+    //executando a function acao() de tempo em tempo
+    //setInterval(acao, 2000);
+
+    //para parar com clearInterval, precisa atribuir a uma var e comentar a linha acima
+    var timer = setInterval(acao, 2000);
+
+  </script>  
+</head>
+    
+<body>  
+
+	<button onclick="clearInterval(timer);">Parar execução</button>
+	<div id="msg"></div>
+
+</body>
+    
+</html>

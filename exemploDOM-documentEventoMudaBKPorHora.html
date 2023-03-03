@@ -1,0 +1,28 @@
+<html>
+    
+<head>
+  <title>Document</title>
+  
+  <script type="text/javascript">    
+   function verificaHora() {
+        var pag = document.getElementById('pagina');
+        var data = new Date(); //retorna a data e hora atual
+        var hora = data.getHours();
+        
+        if(hora>=18) {
+          pag.style.backgroundColor = "blue";
+          pag.style.color = "black";
+        }
+        else {
+          pag.style.backgroundColor = "yellow";
+          pag.style.color = "red";
+        }
+      }      
+  </script>  
+
+</head>
+    
+<body id="pagina" onload="verificaHora();">  
+  <h1>teste</h1>
+</body>    
+</html>

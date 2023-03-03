@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    
+    <script> 
+      /*
+      forEach: a função de callback é executada para cada item da array. 
+      
+      Ela possui três argumentos:
+        itemAtual (valor do item da array), 
+        index (index do valor na array) e 
+        array (array original). 
+
+      Os 2 ultimos não são obrigatórios.
+      */
+
+        const carros = ['Ford', 'Fiat', 'Honda'];
+
+        //com Função Anônima
+        console.log("com Função Anônima\n");
+
+        carros.forEach(function(item, index, array) {
+         console.log(item.toUpperCase());
+        });
+
+        //com Arrow Function
+        console.log("\ncom Arrow Function\n");
+
+        carros.forEach((item, index, array) => {
+         console.log(item.toUpperCase());
+        });
+
+        //Modificando o array original
+        console.log("\nModificando o array original\n");
+
+        carros.forEach((item, index, array) => {
+         array[index] = 'Carro ' + item;
+        });
+        console.log(carros); 
+
+    </script>
+    
+</head>
+<body>
+
+  Arrays
+
+</body>
+</html>

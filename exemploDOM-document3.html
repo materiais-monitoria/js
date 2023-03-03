@@ -1,0 +1,50 @@
+<html>
+    
+  <head>
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+      function defineTitPag() {
+
+        if (document.getElementsByTagName("H1")[0]) {
+          document.getElementsByTagName("H1")[0].remove();  
+        }          
+
+        //lendo o titulo informado pelo usuário
+        var titPag = document.getElementById('titPag').value;
+
+        //cria a tag <h1></h1>
+        var tituloH1 = document.createElement("H1");
+
+        //coloca o texto digitado pelo usuário em um nó de texto
+        var titulo = document.createTextNode(titPag);
+
+        //acessa a div "título"
+        var tituloDiv = document.getElementById('titulo');
+
+        //adiciona o texto dentro do <h1></h1>
+        tituloH1.appendChild(titulo);
+
+        //formata o <h1> para azul
+        tituloH1.style.color = "blue";
+
+        //adiciona o <h1></h1> dentro da div
+        tituloDiv.appendChild(tituloH1);
+      }
+    </script> 
+  </head>
+
+  <body>
+   <div id="titulo"></div>
+
+   <hr>
+
+   <form>
+      Defina o título para essa página:<br>
+      <input type="text" id="titPag"><br><br>
+
+      <input type="button" value="Ok" onclick="defineTitPag();">
+   </form>
+  </body>
+</html>

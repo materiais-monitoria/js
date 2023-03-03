@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Strings</title>
+    
+    <script type="text/javascript">
+      //string para char
+      var str = "hello";
+     
+      var chars = [...str]; //spread operator
+      console.log(chars); 
+      // ['h', 'e',' l',' l', 'o']
+
+      var nome = 'Simone';
+      var sobrenome = 'Dapolito';
+      var idade = 20;      
+
+      console.log("Meu nome é " + nome + ' ' + sobrenome + ". Eu tenho " + idade + " anos.");
+
+      console.log('Meu nome é ' + nome + " " + sobrenome + '. Eu tenho ' + idade + ' anos.');
+
+      console.log(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade} anos.`); //tem que ser com `` e não ''
+
+      //extração de parte de uma string (pode usar slice() tb)
+      var texto = "Mergulhando em tecnologia.";
+      console.log(texto.substr(0,11)); // Mergulhando
+
+      texto = 'Unicamp';      
+      console.log("Tamanho:" + texto.length);
+      console.log(texto.toUpperCase());  //UNICAMP
+      console.log(texto.toLowerCase());  //unicamp
+
+      console.log("-------charAt()--------");   
+      console.log(texto.charAt(3)); //c      
+        
+      console.log("-------Split()-------");         
+      texto = "17/02/2023"; 
+      var aux = texto.split("/"); // ["17", "02", "2023"]
+      console.log(aux);
+
+      if (aux[1] == '02') {
+        var mes = 'Fevereiro';
+      }
+
+      console.log('Limeira, ' + aux[0] + ' de ' + mes + ' de ' + aux[2]);
+
+      var texto2 = "COTIL-UNICAMP-LIMEIRA";      
+      console.log("-------indexOf-------");         
+      console.log(texto2.indexOf('LIMEIRA'));
+ 
+      //startsWith e endsWith
+      var nomeTeste = 'Simone';
+      console.log(nomeTeste.startsWith('Si')); //true
+      console.log(nomeTeste.endsWith('ni')); //false
+
+      //replace - substituir parte de uma string por outra
+      var nome = "André";
+      var comunicacao = "Olá, sr. nomeusurario, informamos que a partir da presente data o senhor tem 50% de desconto em nossa loja.";
+      console.log(comunicacao.replace("nomeusurario",nome));      
+
+      //trim - remove os espaços em branco no início ou fim de uma string
+
+      var login = "   andre@emailteste.com   ";
+      var loginSemEspaco = login.trim();
+      console.log(loginSemEspaco); //andre@emailteste.com     
+    </script>
+    
+</head>
+
+<body>
+
+  Strings
+
+</body>
+
+</html>

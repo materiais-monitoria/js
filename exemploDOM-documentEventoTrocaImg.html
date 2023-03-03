@@ -1,0 +1,50 @@
+<html>
+    
+<head>
+  <title>JS - Troca imagem</title>
+
+  <script type="text/javascript">
+    function destacaTabela() {
+      var tabela = document.getElementById("tabelaAlunos");
+      tabela.style.backgroundColor = "yellow";
+      tabela.style.fontSize = "20px";
+      tabela.style.transform = "rotate(30deg)"; 
+      tabela.style.transitionDuration="5s";    
+    }
+
+    function voltaTabela() {
+      var tabela = document.getElementById("tabelaAlunos");
+      tabela.style.backgroundColor = "white";
+      tabela.style.fontSize = "16px";
+      tabela.style.transform = "rotate(0deg)"; 
+      tabela.style.transitionDuration="2s";    
+    }
+  </script>
+
+</head>
+    
+<body>    
+
+	<img src="../html/imagens/html5.jpg" width="100px" id="logo" onmouseover="this.src = '../html/imagens/css3.png';" 
+  onmouseout="this.src = '../html/imagens/html5.jpg';">  
+
+  <hr>
+
+  <table border="1px" id="tabelaAlunos" onmouseover="destacaTabela();" onmouseout="voltaTabela();">
+    <tr>
+      <th>RA</th>
+      <th>Nome</th>
+    </tr>
+    <tr>
+      <td>1234</td>
+      <td>Simone</td>
+    </tr>
+    <tr>
+      <td>5678</td>
+      <td>Elaine</td>
+    </tr>       
+  </table>  
+    
+</body>
+    
+</html>

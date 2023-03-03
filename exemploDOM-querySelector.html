@@ -1,0 +1,59 @@
+<!-- 
+ - acessando elementos: 
+   - document.querySelector("seletor"); -- retorna o elemento com o seletor informado
+	 Ex: document.querySelector("button"); 
+	 Se houver mais de um elememento com o mesmo seletor, será sempre lido o 1o.
+
+   - document.querySelectorAll("seletor"); -- retorna todos os elementos com o seletor informado
+     Ex: document.querySelectorAll("li"); 
+
+  - para ambos, se o seletor não for uma tag e sim um ID, colocar a # antes e se for class, colocar um . antes.
+      Ex: document.querySelector("#button"); 
+      Ex: document.querySelector(".button"); 
+-->
+
+<html>    
+<head>
+  <title>querySelector</title>
+</head>
+        
+<body>
+
+  Testando querySelector
+  <br><br>
+    
+  <button type="button" id="x" value="Botão 1">Botão 1</button>
+  <button type="button" id="y" value="Botão 2">Botão 2</button>
+    
+  <br><br>
+    
+  Testando querySelectorAll
+  <br>
+    
+    <ul>
+        <li>Informática</li>
+        <li>Edificações</li>
+        <li>Enfermagem</li>
+        <li>Geodésia</li>
+        <li>Qualidade</li>
+        <li>Mecânica</li>
+    </ul>    
+    
+   <script type="text/javascript">       
+     //querySelector       
+     var texto1 = document.querySelector("button").value;
+     alert(texto1);
+
+     var texto2 = document.querySelector("#y").value; 
+     alert(texto2);       
+       
+     //querySelectorAll
+     var elementosLista = document.querySelectorAll("li");
+    
+     for (var i=0; i<=elementosLista.length; i++) {
+         alert(elementosLista[i].textContent);
+     }        
+  </script>    
+
+</body>
+</html>

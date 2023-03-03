@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<title>localStorage</title>
+
+  	<!-- 
+	localStorage - armazena dados sem data de expiração. (ex cookie)
+	Mesmo que fecharmos o navegador, os dados são mantidos por tempo indeterminado.
+  	Para ver os valores em localStore no Google Chrome, vá em ferramentas do desenvolvedor-Application -->
+
+  	<script type="text/javascript">
+
+        function identificaAluno() {
+        	var obj = localStorage.getItem("ra");
+
+		    if(obj != null)
+		    	document.getElementById("aluno").innerText = obj;
+		    else
+		        document.getElementById("aluno").innerText = "";     
+        }
+
+		function gravar()	{			
+			localStorage.ra = document.getElementById("ra").value;
+		    
+		    //localStorage.setItem("ra", document.getElementById("ra").value); 
+
+		    alert("RA gravado.");
+		    document.getElementById("ra").value = "";
+		}
+
+		function ler() {
+		    //var obj = localStorage.ra;  
+		    
+		    var obj = localStorage.getItem("ra");
+
+		    if(obj != null) 
+		        alert(obj)		    
+		    else
+		        alert("A chave procurada não existe no localStorage!")
+		}
+
+		function remover() {
+		    localStorage.removeItem("ra");
+		    alert("A chave RA foi removida.");
+		}
+
+  	</script>
+  </head>
+
+  <body onload="identificaAluno();">
+  
+  	<h1>LocalStorage</h1>
+
+  	Olá <span id="aluno"></span>!
+
+  	<br><br>
+
+  	<form>
+  		RA:<br>
+  		<input type="text" name="ra" id="ra">
+  		<button type="button" onclick="gravar();">Gravar</button>
+
+  		<hr>
+
+		<button type="button" onclick="ler();">Ler RA</button>
+
+		<button type="button" onclick="remover();">Remover RA</button>	
+  		<hr>
+  	</form>
+
+  </body>
+  </html>

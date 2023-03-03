@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Variáveis - Var, Let e Const</title>
+    
+    <script language="Javascript"> 
+
+        var variavel = 'Cotil';
+        console.log('variavel = ' + variavel);
+        console.log(typeof variavel);
+
+        variavel = 10;
+        console.log("variavel = " + variavel);
+        console.log(typeof variavel);
+
+        variavel = true;
+        console.log("variavel = " + variavel);
+        console.log(typeof variavel);
+
+        console.log("como já dizia minha mãe: \"Volte já para casa menino, está na hora do almoço\"");
+
+        console.log('como já dizia minha mãe: "Volte já para casa menino, está na hora do almoço"');  
+
+        console.log('JavaScript is a incredible language, I\'ve never saw nothing similar');  
+
+        console.log("JavaScript is a incredible language, I've never saw nothing similar");
+
+        /* --- escopo de var */
+        var nome = 'Simone';
+
+        if (nome != null) {
+            var sobrenome = 'Dapolito';
+            console.log(nome + ' ' + sobrenome);
+        }
+
+        //a var sobrenome é acessível mesmo fora do if onde foi declarada
+        console.log(nome + ' ' + sobrenome); 
+
+        /* --- escopo de let */
+        let colegio = 'Cotil';
+
+        if (colegio != null) {
+            let universidade = 'Unicamp';
+            console.log(colegio + ' ' + universidade);
+        }
+
+        //console.log(colegio + ' ' + universidade); 
+        //colégio é acessível pois foi declarada fora de if/function/etc, mas universidade só é acessível no escopo (if nesse casa) onde foi declarada
+
+        /* --- const ---*/
+        const IDADE = 18;
+        //IDADE = 21; //errado pois não pode alterar valor de constante
+        console.log(IDADE);
+
+        //const PI; //erro pois não foi inicializada
+
+    </script>
+    
+</head>
+
+<body>
+
+  Introdução ao Javascript  - Variáveis
+
+</body>
+
+</html>

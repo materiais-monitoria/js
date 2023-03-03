@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>1o Exemplo</title>  
+
+    <script type="text/javascript"> 
+      function mudarCor() {
+        document.getElementById("minhaPagina").style.backgroundColor = "pink";
+      }
+    </script>  
+
+    <noscript>     
+      <style>
+        body {
+              background-color: red;
+              color: white;
+            }
+      </style>
+    </noscript>
+  </head>
+
+  <body id="minhaPagina">	
+
+    <noscript>
+      Para usar adequadamente esse site você precisa habilitar o Javascript do seu navegador.
+    </noscript>
+
+    <h1 id="titulo">Introdução ao Javascript</h1>
+
+    <input type="button" value="Mudar Cor" onclick="mudarCor();">
+  </body>
+
+</html>

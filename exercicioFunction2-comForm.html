@@ -1,0 +1,31 @@
+<html>
+	<head>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+		<script type="text/javascript">
+
+		function validarIdade() {
+		  var idade = document.getElementById("idade").value;
+
+			if (idade >= 18) {		
+				swal("Bem vindo!", "Maior de idade!", "success");
+
+			} else {		
+				swal("Cuidado!", "Acesso negado!", "error");
+			} 
+		}
+		</script>
+  </head>
+
+  
+    <body>
+
+      <form>      
+	      Idade:<br>
+	      <input type="text" id="idade">
+	      <input type="button" value="Verificar" onclick="validarIdade();">
+      </form>
+
+    </body>
+</html>

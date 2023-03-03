@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desconstrução Objetos</title>
+    
+    <script> 
+        const pessoa = {
+            nome: "Simone",
+            sobrenome: "Dapólito",
+            idade: 18,
+            cargo: "Professora"
+        };
+
+        console.log(pessoa); //imprime o obj todo
+
+        //let nome = pessoa.nome;
+        let {nome} = pessoa; //declara var nome com o conteudo do atributo pessoa.nome
+        console.log(nome);
+
+        let {sobrenome} = pessoa;
+        console.log(sobrenome);
+
+        let {idade, cargo} = pessoa;
+        console.log(idade);        
+        console.log(cargo);     
+
+        //let funcao = pessoa.cargo;
+        let {cargo:funcao} = pessoa; //declara var funcao com o conteudo do atributo pessoa.cargo
+        console.log(funcao);      
+
+        nome = "Maria"; //altera o valor de nome na var nome, mas o objeto continua com o vl original
+        console.log(nome);    
+        console.log(pessoa);    
+    </script>
+    
+</head>
+<body>
+
+  Introdução ao Javascript - Desconstrução Objetos
+  
+</body>
+</html>

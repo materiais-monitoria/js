@@ -1,0 +1,30 @@
+
+<!-- verificar se hj é seu aniversário -->
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Datas</title>
+
+<script> 
+
+	var hoje = new Date();  //data atual
+
+    var aniversario = new Date("11/13/2020");	//padrão mm/dd/yyyy
+    
+    if ( (hoje.getDate() == aniversario.getDate()) && (hoje.getMonth() == aniversario.getMonth()) )  {
+    	alert("Feliz aniversario!");
+    } else {
+        alert("Calma, seu niver tá chegando !");
+    } 
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

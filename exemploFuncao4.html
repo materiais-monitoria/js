@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+    
+    <script> 
+
+        //Uma função anônima é uma função sem nome.
+        //Funções anônimas podem ser usadas como argumento para outras funções ou como uma execução de função invocada imediatamente.
+
+        var somar = function(valor1, valor2) {
+          console.log("somar")
+          return valor1 + valor2;
+        }
+
+        var calcularSalario = function(salario, horaExtra, somar) {
+          console.log("calcularSalario")
+          return somar(salario,horaExtra);
+        }
+
+        console.log(calcularSalario(1000,120,somar)); //A função somar está sendo passada como parâmetro    
+ 
+        //Se você deseja criar uma função e executá-la imediatamente após a declaração, pode usar a função anônima como esta:
+        (function() {
+          console.log("teste");
+        })();
+
+        //O ES6 introduziu a expressão da função de seta (arrow function) que fornece uma abreviação para declarar funções anônimas:
+
+        let show = function() {
+          console.log("Função Anônima");
+        }
+
+        show();
+
+        //… o código acima pode ser reduzido usando a seguinte arrow function:
+        let show = () => console.log("Função Anônima");
+        show();
+
+    </script>
+    
+</head>
+<body>
+
+  Function
+
+</body>
+</html>

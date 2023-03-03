@@ -1,0 +1,104 @@
+<!-- 
+
+- alterando valores e atributos:
+  - document.querySelector("#myinput").value = document.getElementById("myinput")
+  - document.querySelector("#myinput").getAttribute("type") = retorna text  
+  - document.querySelector("#myinput").setAttribute("type", "number") = altera o tipo do elemento
+
+  -document.querySelector("#myinput").style.backgroundColor = "blue" - para mexer com estilo
+
+  -document.querySelector("#myinput").classList.add("my-input"); - adiciona a classe my-input ao elemento
+  -document.querySelector("#myinput").classList.contains("my-input"); - verifica se um elemento tem uma determinada classe (ret true/false)
+  -document.querySelector("#myinput").classList.remove("my-input"); - remove a classe my-input do elemento
+  -document.querySelector("#myinput").classList.toggle("my-input"); - se o elemento já tiver a classe, remove. Se não tiver, adiciona. (alterna)
+
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+
+  <script type="text/javascript">      
+    function alteraCampo() {
+
+      console.log(document.querySelector("#valor").getAttribute("type"));
+      console.log(document.querySelector("#valor").value);
+
+      if (document.querySelector('#Numero').checked) {
+        document.querySelector("#valor").setAttribute("type", "number"); 
+        document.querySelector("#valor").setAttribute("size", "5");  
+        document.querySelector("#valor").style.backgroundColor = "yellow";
+
+      } else if (document.querySelector('#Texto').checked) {
+        document.querySelector("#valor").setAttribute("type", "text");  
+        document.querySelector("#valor").setAttribute("size", "50");  
+        document.querySelector("#valor").style.backgroundColor = "pink";      
+      }
+
+    }           
+
+    function alteraImg() {      
+      if (document.querySelector('#reduzir').checked) {
+        document.querySelector("#logo").setAttribute("width", "20px"); 
+        document.querySelector("#logo").setAttribute("title", "Logo reduzido"); 
+      } else if (document.querySelector('#aumentar').checked) {
+        document.querySelector("#logo").setAttribute("width", "80px"); 
+        document.querySelector("#logo").setAttribute("title", "Logo aumentado");
+      }      
+    }  
+
+    function formataTable() {      
+      if (document.querySelector('#impressao').checked) {
+        document.querySelector("#alunos").setAttribute("border", "1px"); 
+        document.querySelector("#alunos").setAttribute("bordercolor", "black"); 
+        document.querySelector("#alunos").setAttribute("cellspacing", "0px"); 
+        document.querySelector("#alunos").setAttribute("width", "50%"); 
+      } else if (document.querySelector('#tela').checked) {
+        document.querySelector("#alunos").setAttribute("border", "3px"); 
+        document.querySelector("#alunos").setAttribute("bordercolor", "red"); 
+        document.querySelector("#alunos").setAttribute("cellspacing", "3px"); 
+        document.querySelector("#alunos").setAttribute("width", "100%");         
+      }      
+    }            
+  </script>    
+
+</head>
+        
+<body>
+    
+  Número <input type="radio" name="opcao" id="Numero" value="Numero" onclick="alteraCampo();">  
+  Texto  <input type="radio" name="opcao" id="Texto" value="Texto" onclick="alteraCampo();"> 
+
+  <br><br>
+  Informe o Valor:<br>
+  <input type="text" id="valor">
+
+  <hr>
+
+  Reduzir <input type="radio" name="opcao" id="reduzir" onclick="alteraImg();">Aumentar <input type="radio" name="opcao" id="aumentar" onclick="alteraImg();">
+  <br><br>
+  <img src="../html/imagens/html5.jpg" id="logo">  
+
+  <hr>
+  Impressão <input type="radio" name="opcao" id="impressao" onclick="formataTable();">Tela <input type="radio" name="opcao" id="tela" onclick="formataTable();">
+  
+  <br><br>
+
+  <table id="alunos">
+    <tr>
+      <td>RA</td>
+      <td>Nome</td>
+    </tr>
+    <tr>
+      <td>1234</td>
+      <td>Ana</td>
+    </tr> 
+    <tr>
+      <td>5678</td>
+      <td>Maria </td>
+    </tr>           
+  </table>
+    
+</body>
+</html>

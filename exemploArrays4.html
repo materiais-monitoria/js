@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    
+    <script> 
+
+        //map - nos permite percorrer um vetor e obter um novo array cujos itens são o resultado de uma função de callback que recebe como parâmetro cada item original. Funciona da mesma forma que o forEach(), porém ao invés de retornar undefined, retorna um nova array com valores atualizados de acordo com o return de cada iteração. Se o objetivo for modificar o os valores do array atual, sempre utilize o map.
+
+        const lista = [1,2,3,4,5,6];
+
+        //item = valor de cada posição
+        const novaLista = lista.map(function(item) {             
+            return item * 5;
+        });
+        console.log("Resultado Map: " + novaLista);
+
+        //item = valor do item, indice = indice o array
+        const novaLista2 = lista.map(function(item, index) {
+          return item + index; 
+        });
+        console.log("Resultado Map2: " + novaLista2); 
+
+        //com arrow function
+        const carros = ['Ford', 'Fiat', 'Honda'];
+
+        /*const newCarros = carros.map(function(item) {
+         return 'Carro ' + item;
+        });*/
+
+        const newCarros = carros.map((item) => {
+         return 'Carro ' + item;
+        });
+
+        console.log(carros); // ['Ford', 'Fiat', 'Honda']
+        console.log(newCarros); // ['Carro Ford', 'Carro Fiat', 'Carro Honda']; 
+
+    </script>
+    
+</head>
+<body>
+
+  Arrays
+
+</body>
+</html>

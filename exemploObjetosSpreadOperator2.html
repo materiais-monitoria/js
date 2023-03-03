@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spread Operator (...)</title>
+    
+    <script> 
+
+      function cadastraPessoa(info) {
+        let novosDados = {
+          ...info,
+          cargo:"Professora",
+          status: "atuando",
+          codigo: 1234
+        };
+
+        console.log(novosDados);
+      }
+
+      cadastraPessoa({nome: "Simone", sobrenome: "Dapólito", anoInicio: 2020});
+
+    </script>
+    
+</head>
+<body>
+
+  Introdução ao Javascript  - Spread Operator (...)
+
+</body>
+</html>

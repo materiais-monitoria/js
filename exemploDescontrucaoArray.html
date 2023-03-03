@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desconstrução Array</title>
+    
+    <script> 
+        let nomes = ['Simone', 'Dapolito', 18]
+        console.log(nomes); //imprime o array todo
+
+        //let segundoNome = nomes[1];
+        let { 1:segundoNome } = nomes; //atribui o valor de nomes[1] a var segundoNome
+        console.log(segundoNome); 
+
+        let { 0:primeiroNome, 2:idade } = nomes; //atribui o valor de nomes[0] a var primeiroNome e de nomes[2] a var idade
+        console.log(primeiroNome);         
+        console.log(idade);   
+
+        let [nome, sobrenome, age] = nomes; //outra forma de desconstruir o array
+        console.log(nome);   
+        console.log(sobrenome);                   
+        console.log(age);     
+    </script>
+    
+</head>
+<body>
+
+  Introdução ao Javascript - Desconstrução Array
+</body>
+</html>
